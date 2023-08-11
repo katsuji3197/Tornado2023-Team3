@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
 import EditProfilePage from "./pages/EditProfilePage";
 import AccountSettingsPage from "./pages/AccountSettingsPage";
-// import Header from "./components/common/Header";
+import Header from "./components/common/Header";
 // import Footer from "./components/common/Footer";
 
 import "./index.css";
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        {/* <Header /> */}
+        <Header />
 
         <main className="flex-1">
           <Routes>
