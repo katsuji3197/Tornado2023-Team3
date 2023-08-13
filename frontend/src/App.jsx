@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import DashboardPage from "./pages/DashboardPage";
+import EditProfilePage from "./pages/EditProfilePage";
+import AccountSettingsPage from "./pages/AccountSettingsPage";
+// import Header from "./components/common/Header";
+// import Footer from "./components/common/Footer";
 
+import "./index.css";
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        {/* <Header /> */}
 
-export default App
+        <main className="flex-1">
+          <Routes>
+            <Route path="/mypage" element={<DashboardPage />} />
+            <Route path="/edit-profile" element={<EditProfilePage />} />
+            <Route path="/account-settings" element={<AccountSettingsPage />} />
+            {/* その他のルートもここに追加可能 */}
+            {/* <Route path="/anotherPage" element={<AnotherPage />} /> */}
+          </Routes>
+        </main>
+
+        {/* <Footer /> */}
+      </div>
+    </Router>
+  );
+}
