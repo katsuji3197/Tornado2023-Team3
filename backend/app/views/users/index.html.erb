@@ -1,7 +1,7 @@
  <% @users.each do |user| %>
    <p>name</p>
    <div class="ruby-name">
-    <%= user.userId %>
+    <%= user.name %>
     <%= link_to("編集", "/users/#{user.id}/edit") %>
    </div>
  <% end %>
