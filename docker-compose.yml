@@ -19,16 +19,16 @@ services:
     depends_on:
       - db
 
-  frontend:
-    build:
-      context: ./frontend/
-      dockerfile: Dockerfile
-    volumes:
-      - ./frontend:/frontend
-    environment:
-      - HOST=0.0.0.0
-      - CHOKIDAR_USEPOLLING=true
-    tty: true
-    command: yarn dev
-    ports:
-      - "3001:3001"
+  # frontend:
+  #   build:
+  #     context: ./frontend/
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./frontend:/frontend
+  #   environment:
+  #     - HOST=0.0.0.0
+  #     - CHOKIDAR_USEPOLLING=true
+  #   tty: true
+  #   command: yarn dev
+  #   ports:
+  #     - "3001:3001"
