@@ -7,7 +7,7 @@ const user = {
   profilePicture: "https://avatars.githubusercontent.com/u/12345678?v=4",
 };
 
-const AccountSettingsPage = () => {
+export const AccountSettingsPage = () => {
   return (
     <div className="account-settings-container p-4 md:p-8 bg-blue-950 text-white min-h-screen space-y-6 md:space-y-12">
       {/* マイページに戻るリンク */}
@@ -115,5 +115,3 @@ const AccountSettingsPage = () => {
     </div>
   );
 };
-
-export default AccountSettingsPage;

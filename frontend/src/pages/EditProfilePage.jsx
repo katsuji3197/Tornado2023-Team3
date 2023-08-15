@@ -10,7 +10,7 @@ const user = {
   profilePicture: "https://avatars.githubusercontent.com/u/12345678?v=4",
 };
 
-const EditProfilePage = () => {
+export const EditProfilePage = () => {
   // サンプル
   const prefectures = [
     "北海道",
@@ -293,5 +293,3 @@ const EditProfilePage = () => {
     </div>
   );
 };
-
-export default EditProfilePage;
