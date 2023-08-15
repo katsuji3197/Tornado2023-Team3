@@ -63,6 +63,7 @@ rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
+/tmp/*
 backend/log/*
 backend/tmp/*
 backend/log/.keep
