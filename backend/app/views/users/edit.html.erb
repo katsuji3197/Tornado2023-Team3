@@ -1,0 +1,14 @@
+<%= form_tag("/users/#{@user.id}/update") do  %>
+  
+  <input type="text" value="<%=@user.name%>" name="updatedName">
+  <input type="text" value="<%=@user.email%>" name="updatedEmail">
+  <input type="text" value="<%=@user.sex%>" name="updatedSex">
+  <input type="date" value="<%=@user.birthdate%>" name="updatedBirthdate">
+  <input type="text" value="<%=@user.hometown%>" name="updatedHometown">
+  <input type="text" value="<%=@user.residence%>" name="updatedResidence">
+  <input type="text" value="<%=@user.job%>" name="updatedJob">
+ 
+
+  <input type="submit" value="送信">
+<% end %>
+
