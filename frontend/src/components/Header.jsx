@@ -1,7 +1,6 @@
-// Header.jsx
-import "../styles/Header.css";
-import alienLogo from "./images/icon_header_Alien.svg";
-import userLogo from "./images/icon_header_UnknownUser.svg";
+import "../assets/styles/Header.css";
+import alienLogo from "../assets/images/icon_header_Alien.svg";
+import userLogo from "../assets/images/icon_header_UnknownUser.svg";
 
 function Header() {
   return (
