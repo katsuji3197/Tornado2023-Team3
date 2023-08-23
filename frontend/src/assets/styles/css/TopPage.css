@@ -1,0 +1,74 @@
+/* StartScreen.css */ 
+@import 'base.css';
+
+.screen-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  min-height: 100vh; /* 画面の高さいっぱいに設定 */
+}
+
+.title-start {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maintitle img {
+  width: 250px;
+}
+
+.subtitle {
+  font-family: Noto Sans JP;
+  color: #000000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+}
+
+.register {
+  background: linear-gradient(90deg, #9333EA 0%, #60A5FA 100%);
+  box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.6);
+  color: #ffffff;
+  margin-top: 120px;
+  letter-spacing: 4px;
+  width: 282px;
+  height: 68px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+}
+.register:hover {
+  cursor: pointer;
+}
+
+.login {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.3);
+  border-radius: 12px;
+  color: #000000;
+  margin-top: 20px;
+  width: 282px;
+  height: 68px;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+  
+}
+.login:hover {
+  cursor: pointer;
+}
+
+.regulations {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 3px;
+}
