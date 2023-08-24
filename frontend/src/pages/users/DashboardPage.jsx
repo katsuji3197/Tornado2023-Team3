@@ -33,8 +33,11 @@ const DashboardPage = () => {
       {/* プロフィール編集とアカウント設定への遷移ボタン */}
       <div className="navigation-buttons space-y-4">
         <Link
-          to="/edit-profile"
-          className="edit-profile-btn block text-center py-2 px-4 bg-blue-500 text-white rounded-full hover:bg-green-600"
+          to={"/edit-profile"}
+          state={{ from: "/mypage" }}
+          className={
+            "edit-profile-btn block text-center py-2 px-4 bg-blue-500 text-white rounded-full hover:bg-green-600"
+          }
         >
           プロフィール編集
         </Link>

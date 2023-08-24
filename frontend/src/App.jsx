@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import DashboardPage from "./pages/DashboardPage";
-import EditProfilePage from "./pages/EditProfilePage";
-import AccountSettingsPage from "./pages/AccountSettingsPage";
+import DashboardPage from "./pages/users/DashboardPage";
+import { EditProfilePage } from "./pages/users/EditProfilePage";
+import AccountSettingsPage from "./pages/users/AccountSettingsPage";
+import { MatchInputPage } from "./pages/matches/MatchInputPage";
+import { MatchResultPage } from "./pages/matches/MatchResultPage";
+import { MatchWaitingPage } from "./pages/matches/MatchWaitingPage";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
@@ -19,8 +22,9 @@ export default function App() {
             <Route path="/mypage" element={<DashboardPage />} />
             <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/account-settings" element={<AccountSettingsPage />} />
-            {/* その他のルートもここに追加可能 */}
-            {/* <Route path="/anotherPage" element={<AnotherPage />} /> */}
+            <Route path="/match-input" element={<MatchInputPage />} />
+            <Route path="/match-result" element={<MatchResultPage />} />
+            <Route path="/match-waiting" element={<MatchWaitingPage />} />
           </Routes>
         </main>
 
