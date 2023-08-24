@@ -8,31 +8,36 @@
 ```
 src/
 │
-├── components/             # 再利用可能なコンポーネント集
-│   ├── TextInput.jsx       # テキスト入力コンポーネント
-│   ├── BackLink.jsx        # バックリンクコンポーネント
-│   ├── HobbiesSelector.jsx # 趣味選択コンポーネント
-│   ├── Header.jsx          # ヘッダーコンポーネント
-│   ├── RadioButtonGroup.jsx# ラジオボタングループコンポーネント
-│   ├── Footer.jsx          # フッターコンポーネント
-│   └── DateInput.jsx       # 日付入力コンポーネント
+├── components/                         # 再利用可能なコンポーネント集
+│   ├── TextInput.jsx                   # テキスト入力コンポーネント
+│   ├── BackLink.jsx                    # バックリンクコンポーネント
+│   ├── HobbiesSelector.jsx             # 趣味選択コンポーネント
+│   ├── Header.jsx                      # ヘッダーコンポーネント
+│   ├── RadioButtonGroup.jsx            # ラジオボタングループコンポーネント
+│   ├── Footer.jsx                      # フッターコンポーネント
+│   └── DateInput.jsx                   # 日付入力コンポーネント
 │
-├── assets/                 # アセットフォルダ
-│   ├── styles/             # スタイルシートフォルダ
-│   │   └── tailwind.css    # Tailwind CSSスタイルシート
+├── assets/                             # アセットフォルダ
+│   ├── styles/                         # スタイルシートフォルダ
+│   │   └── tailwind.css                # Tailwind CSSスタイルシート
 │   │
-│   └── images/             # 画像フォルダ
+│   └── images/                         # 画像フォルダ
 │       ├── icon_header_UnknownUser.svg # 未知のユーザーアイコン
 │       └── icon_header_Alien.svg       # エイリアンアイコン
 │
-├── pages/                  # 各ページのコンポーネント集
-│   ├── EditProfilePage.jsx # プロフィール編集ページ
-│   ├── DashboardPage.jsx   # ダッシュボードページ
-│   └── AccountSettingsPage.jsx # アカウント設定ページ
+├── pages/                              # 各ページのコンポーネント集
+│   ├── users/
+│   │   ├── EditProfilePage.jsx         # プロフィール編集ページ
+│   │   ├── DashboardPage.jsx           # ダッシュボードページ
+│   │   └── AccountSettingsPage.jsx     # アカウント設定ページ
+│   └── matches/                        # マッチ関連ページのコンポーネント集
+│       ├── MatchInputPage.jsx          # マッチング入力画面
+│       ├── MatchWaitingPage.jsx        # マッチング待機画面
+│       └── MatchResultPage.jsx         # マッチング結果画面(マッチング詳細画面)
 │
-├── main.jsx                # アプリケーションのエントリーポイント
+├── main.jsx                            # アプリケーションのエントリーポイント
 │
-└── App.jsx                 # メインアプリケーションコンポーネント
+└── App.jsx                             # メインアプリケーションコンポーネント
 ```
 
 ## 使い方
