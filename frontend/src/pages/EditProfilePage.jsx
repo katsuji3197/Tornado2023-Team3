@@ -121,7 +121,7 @@ const EditProfilePage = () => {
   };
 
   return (
-    <div className="edit-profile-container p-4 md:p-8 bg-blue-950 text-white min-h-screen space-y-6 md:space-y-32">
+    <div className="edit-profile-container p-4 md:p-8 bg-white ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
       <BackLink to="/mypage" label="マイページに戻る" />
 
@@ -134,7 +134,7 @@ const EditProfilePage = () => {
       <div className="name-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">表示名</h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={name}
           onChange={handleNameChange}
           rows="1"
@@ -155,7 +155,7 @@ const EditProfilePage = () => {
         <h2 className="text-lg md:text-2xl">生年月日</h2>
         <input
           type="date"
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={birthdate}
           onChange={(e) => setBirthdate(e.target.value)}
         />
@@ -165,7 +165,7 @@ const EditProfilePage = () => {
       <div className="birthplace-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">出身地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-white rounded-xl shadow"
           value={birthplace}
           onChange={(e) => setBirthplace(e.target.value)}
         >
@@ -181,7 +181,7 @@ const EditProfilePage = () => {
       <div className="residence-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">居住地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={residence}
           onChange={(e) => setResidence(e.target.value)}
         >
@@ -197,7 +197,7 @@ const EditProfilePage = () => {
       <div className="occupation-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">職業</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={occupation}
           onChange={(e) => setOccupation(e.target.value)}
         >
@@ -230,7 +230,7 @@ const EditProfilePage = () => {
 
         {/* 趣味の選択 */}
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value=""
           onChange={(e) => {
             const value = e.target.value;
@@ -260,11 +260,11 @@ const EditProfilePage = () => {
             placeholder="新しい趣味を追加"
             value={newHobby}
             onChange={(e) => setNewHobby(e.target.value)}
-            className="p-2 md:p-4 rounded-md bg-blue-900 flex-grow"
+            className="p-2 md:p-4 bg-white rounded-xl shadow flex-grow"
           />
           <button
             onClick={handleAddHobby}
-            className="ml-2 p-2 md:p-4 rounded-md bg-blue-700"
+            className="ml-2 p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-white"
           >
             追加
           </button>
@@ -277,7 +277,7 @@ const EditProfilePage = () => {
           その他、経験してきたことなど自由に書いてください
         </h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={experience}
           onChange={(e) => setExperience(e.target.value)}
           rows="5"
@@ -286,7 +286,7 @@ const EditProfilePage = () => {
 
       {/* 変更を保存するボタン（実際には実装が必要） */}
       <div>
-        <button className="bg-blue-500 py-1 md:py-2 px-2 md:px-4 rounded-full">
+        <button className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
           変更を保存する
         </button>
       </div>
