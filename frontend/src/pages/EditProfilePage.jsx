@@ -121,7 +121,7 @@ const EditProfilePage = () => {
   };
 
   return (
-    <div className="edit-profile-container p-4 md:p-8 bg-white ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
+    <div className="edit-profile-container p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
       <BackLink to="/mypage" label="マイページに戻る" />
 
@@ -142,13 +142,16 @@ const EditProfilePage = () => {
       </div>
 
       {/* 性別 */}
-      <RadioButtonGroup
-        options={genderOptions}
-        selectedValue={sex}
-        onChange={handleSexChange}
-        name="gender"
-        className="profile-text-section mb-4 md:mb-8"
-      />
+      <div>
+        <h2 className="text-lg md:text-2xl">性別</h2>
+        <RadioButtonGroup
+          options={genderOptions}
+          selectedValue={sex}
+          onChange={handleSexChange}
+          name="gender"
+          className="profile-text-section mb-4 md:mb-8"
+        />
+      </div>
 
       {/* 生年月日 */}
       <div className="birthdate-section mb-4 md:mb-8">
