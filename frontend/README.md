@@ -44,7 +44,7 @@ src/
 $ yarn 
 
 // ローカルサーバーの起動
-$ yarn start
+$ yarn dev
 ```
 
 ### VSCode設定
