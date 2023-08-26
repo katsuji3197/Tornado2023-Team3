@@ -1,6 +1,7 @@
 // TopPage.jsx
 import '../assets/styles/css/TopPage.css'
 import titleLogo from '../assets/images/icon_header_Alien.svg'
+import { Link } from 'react-router-dom';
 
 export const TopPage = () => {
   return (
@@ -13,8 +14,8 @@ export const TopPage = () => {
       </div>
 
 
-      <div className="register">新規登録</div>
-      <div className="login">ログイン</div>
+      <div className="register"><Link to="/signup">新規登録</Link></div>
+      <div className="login"><Link to="/login">ログイン</Link></div>
       
     </div>
   );

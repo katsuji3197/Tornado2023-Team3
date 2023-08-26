@@ -1,7 +1,7 @@
-/* LoginScreen.css */
+/* SignUpPage.css */
 @import 'base.css';
 
-.screen-login {
+.screen-signup {
   background-color: #ffffff;
   height: 80vh;
   display: flex;
@@ -9,28 +9,28 @@
   justify-content: center; /* 水平方向の中央揃え */
 }
 
-.screen-login-wrapper {
+.screen-signup-wrapper {
   padding-top: 20px;
   width: 282px;
 }
 
-.title-login {
+.title-signup {
   width: 100%;
 }
-.title-login img {
+.title-signup img {
   width: 100%;
 }
 
-.name-wrapper {
+.mail-wrapper {
   padding-top: 70px;
 }
-.name-title {
+.mail-title {
   font-size: 16px;
   font-weight: bold;
   color: #2D2D2D;
   letter-spacing: 4px;
 }
-.name-input {
+.mail-input {
   margin-top: 4px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
@@ -75,7 +75,7 @@
   letter-spacing: 4px;
 }
 
-.btn-login {
+.btn-next {
   font-weight: bold;
   border-radius: 12px;
   margin-top: 30px;
