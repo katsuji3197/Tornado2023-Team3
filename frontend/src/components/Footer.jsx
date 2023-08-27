@@ -46,7 +46,8 @@ export const Footer = () => {
         </Link>
 
         <Link
-          to="/edit-profile"
+          to={"/edit-profile"}
+          state={{ from: "/mypage" }}
           className={`flex flex-col items-center ${
             isCurrentRoute("/edit-profile") ? "text-white" : "text-gray-400"
           }`}

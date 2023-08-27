@@ -1,6 +1,7 @@
 import { useState } from "react";
-import BackLink from "../components/BackLink";
-import RadioButtonGroup from "../components/RadioButtonGroup";
+import { useLocation } from "react-router-dom";
+import BackLink from "../../components/BackLink";
+import RadioButtonGroup from "../../components/RadioButtonGroup";
 
 const user = {
   name: "John Doe",
@@ -90,6 +91,9 @@ export const EditProfilePage = () => {
     { label: "その他", value: 2 },
   ];
 
+  const location = useLocation();
+  const from = location.state?.from;
+
   const [name, setName] = useState(user.name);
   const [sex, setSex] = useState(user.sex);
   const [birthdate, setBirthdate] = useState("");
@@ -119,10 +123,15 @@ export const EditProfilePage = () => {
     setSex(Number(e.target.value));
   };
 
+  console.log("from", from);
   return (
     <div className="edit-profile-container p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
-      <BackLink to="/mypage" label="マイページに戻る" />
+      {from === "/mypage" ? (
+        <BackLink to="/mypage" label="マイページに戻る" />
+      ) : (
+        <BackLink to={`${from}`} label={`戻る`} />
+      )}
 
       {/* ページのタイトル */}
       <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8">
