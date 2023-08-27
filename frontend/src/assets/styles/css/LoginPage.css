@@ -1,0 +1,90 @@
+/* LoginScreen.css */
+
+.screen-login {
+  background-color: #ffffff;
+  height: 80vh;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+}
+
+.screen-login-wrapper {
+  padding-top: 20px;
+  width: 282px;
+}
+
+.title-login {
+  width: 100%;
+}
+.title-login img {
+  width: 100%;
+}
+
+.name-wrapper {
+  padding-top: 70px;
+}
+.name-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d2d;
+  letter-spacing: 4px;
+}
+.name-input {
+  margin-top: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+  border-radius: 12px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: #000000;
+  padding: 10px;
+}
+
+.pass-wrapper {
+  padding-top: 20px;
+}
+.pass-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d2d;
+  letter-spacing: 4px;
+}
+.pass-input {
+  margin-top: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+  border-radius: 12px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: #000000;
+  padding: 10px;
+}
+.pass-input input {
+  color: #000000;
+}
+
+.pass-forget {
+  color: #5c5c5c;
+  padding-top: 4px;
+  text-align: right;
+  text-decoration: underline;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.btn-login {
+  font-weight: bold;
+  border-radius: 12px;
+  margin-top: 30px;
+  width: 100%;
+  height: 68px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #9333ea 0%, #60a5fa 100%);
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+}

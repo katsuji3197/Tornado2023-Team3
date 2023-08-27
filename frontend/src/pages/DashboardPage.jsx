@@ -9,7 +9,7 @@ const user = {
 
 const alienEncounters = 200;
 
-const DashboardPage = () => {
+export const DashboardPage = () => {
   return (
     <div className="dashboard-container p-8 bg-blue-950 text-white min-h-screen space-y-32">
       {/* ユーザーの写真と名前 */}
@@ -48,5 +48,3 @@ const DashboardPage = () => {
     </div>
   );
 };
-
-export default DashboardPage;

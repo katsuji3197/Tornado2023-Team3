@@ -1,0 +1,9 @@
+<svg width="160" height="112" viewBox="0 0 160 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Vector" d="M32 8C32 3.575 35.575 0 40 0H80C84.425 0 88 3.575 88 8V96H112V56C112 51.575 115.575 48 120 48H152C156.425 48 160 51.575 160 56C160 60.425 156.425 64 152 64H128V104C128 108.425 124.425 112 120 112H80C75.575 112 72 108.425 72 104V16H48V56C48 60.425 44.425 64 40 64H8C3.575 64 0 60.425 0 56C0 51.575 3.575 48 8 48H32V8Z" fill="url(#paint0_linear_349_1958)"/>
+<defs>
+<linearGradient id="paint0_linear_349_1958" x1="1.55247e-07" y1="55.2329" x2="160" y2="55.2329" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9334EB"/>
+<stop offset="1" stop-color="#61A5FB"/>
+</linearGradient>
+</defs>
+</svg>
