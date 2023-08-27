@@ -9,12 +9,12 @@ const user = {
 
 export const AccountSettingsPage = () => {
   return (
-    <div className="account-settings-container p-4 md:p-8 bg-blue-950 text-white min-h-screen space-y-6 md:space-y-12">
+    <div className="text-neutral-800 account-settings-container p-4 md:p-8 bg-gray-50 min-h-screen space-y-6 md:space-y-12">
       {/* マイページに戻るリンク */}
-      <Link to="/mypage" className="flex items-center hover:text-gray-400 mb-4">
+      <Link to="/mypage" className="flex items-center hover:text-gray-800 mb-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill="#000"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
@@ -26,13 +26,8 @@ export const AccountSettingsPage = () => {
             d="M15.75 19.5L8.25 12l7.5-7.5"
           />
         </svg>
-        <span className="ml-2">マイページに戻る</span>
+        <span className="ml-2 text-gray-900">マイページに戻る</span>
       </Link>
-
-      {/* ページのタイトル */}
-      <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8">
-        アカウント情報
-      </h1>
 
       {/* プロフィール写真 */}
       <div className="profile-photo-section mb-4 md:mb-8 flex justify-center">
@@ -48,7 +43,7 @@ export const AccountSettingsPage = () => {
             height="24"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="#000"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
@@ -59,56 +54,63 @@ export const AccountSettingsPage = () => {
           </svg>
         </span>
       </div>
-
+      {/* ページのタイトル */}
+      <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-neutral-800">
+        あなたについて
+      </h1>
       {/* ID */}
+      <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-id"
         className="block p-2 hover:bg-blue-900 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
-            <h2 className="text-lg md:text-2xl">ID:</h2>
-            <p className="text-base md:text-xl">{user.name}</p>
+            <h2 className="text-lg md:text-2xl text-neutral-800">ID:</h2>
+            <p className="text-base md:text-xl text-neutral-800">{user.name}</p>
           </div>
-          <span className="text-xl md:text-3xl">&gt;</span>
+          <span className="text-xl md:text-3xl text-neutral-800">&gt;</span>
         </div>
       </Link>
 
       {/* メールアドレスの表示 */}
+      <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-email"
         className="block p-2 hover:bg-blue-900 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
-            <h2 className="text-lg md:text-2xl">メールアドレス:</h2>
-            <p className="text-base md:text-xl">{user.email}</p>
+            <h2 className="text-lg md:text-2xl text-neutral-800">メールアドレス:</h2>
+            <p className="text-base md:text-xl text-neutral-800">{user.email}</p>
           </div>
-          <span className="text-xl md:text-3xl">&gt;</span>
+          <span className="text-xl md:text-3xl text-neutral-800">&gt;</span>
         </div>
       </Link>
 
       {/* TODO：パスワード*/}
+      <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-password"
         className="block p-2 hover:bg-blue-900 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
-            <h2 className="text-lg md:text-2xl">パスワード:</h2>
-            <p className="text-base md:text-xl">********</p>
+            <h2 className="text-lg md:text-2xl text-neutral-800">パスワード:</h2>
+            <p className="text-base md:text-xl text-neutral-800">********</p>
           </div>
-          <span className="text-xl md:text-3xl">&gt;</span>
+          <span className="text-xl md:text-3xl text-neutral-800">&gt;</span>
         </div>
       </Link>
 
       {/* TODO：アカウントの削除 */}
+      <div className="ml-2 w-full md:p-4 border border-gray-200" />
       <div className="delete-account-section">
         <h2 className="text-lg md:text-2xl">アカウントの削除:</h2>
         <p className="text-red-500">
           このアクションは元に戻せません。注意してください。
         </p>
-        <button className="bg-red-500 py-1 md:py-2 px-2 md:px-4 rounded-full mt-2 md:mt-4">
+        <button className="bg-red-500 ml-2 w-full p-2 md:p-4 rounded-xl mt-2 md:mt-4">
           アカウントを削除する
         </button>
       </div>
