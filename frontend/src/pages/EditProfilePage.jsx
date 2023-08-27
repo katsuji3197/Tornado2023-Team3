@@ -155,7 +155,7 @@ const EditProfilePage = () => {
 
       {/* 生年月日 */}
       <div className="birthdate-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">生年月日</h2>
+        <h2 className="text-lg md:text-2xl">年月日日</h2>
         <input
           type="date"
           className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
