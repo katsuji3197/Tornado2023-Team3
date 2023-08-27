@@ -61,6 +61,20 @@ const EditProfilePage = () => {
     "鹿児島県",
     "沖縄県",
   ];
+  const jobCategories = [
+    "IT・通信",
+    "医療・福祉",
+    "建築・不動産",
+    "教育・研究",
+    "金融・保険",
+    "製造",
+    "流通・小売",
+    "サービス",
+    "広告・マスコミ",
+    "公務員",
+    "その他",
+    "学生",
+  ];
   const [hobbiesList, setHobbiesList] = useState([
     "読書",
     "映画鑑賞",
@@ -84,8 +98,6 @@ const EditProfilePage = () => {
   const [occupation, setOccupation] = useState("");
   const [hobbies, setHobbies] = useState([]);
   const [newHobby, setNewHobby] = useState("");
-  const [school, setSchool] = usestate("");
-  const [gakubu, setgakubu] = usestate("");
   const [experience, setExperience] = useState("");
 
   const handleAddHobby = () => {
@@ -187,23 +199,33 @@ const EditProfilePage = () => {
       {/* 学校 */}
       <div className="occupation-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">学校</h2>
-        <textarea
+        <select
           className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
-          value={school}
-          onChange={(e) => setSchool(e.target.value)}
-          rows="5"
-        ></textarea>
+          value={occupation}
+          onChange={(e) => setOccupation(e.target.value)}
+        >
+          {jobCategories.map((job) => (
+            <option value={job} key={job}>
+              {job}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* 学部・学科 */}
       <div className="occupation-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">学部・学科</h2>
-        <textarea
+        <h2 className="text-lg md:text-2xl">学校</h2>
+        <select
           className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
-          value={gakubu}
-          onChange={(e) => setgakubu(e.target.value)}
-          rows="5"
-        ></textarea>
+          value={occupation}
+          onChange={(e) => setOccupation(e.target.value)}
+        >
+          {jobCategories.map((job) => (
+            <option value={job} key={job}>
+              {job}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* 趣味 */}
