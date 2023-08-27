@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { DefaultLayout } from "./layouts/DefaultLayout";
 import { PlainLayout } from "./layouts/PlainLayout";
 
-import { HomePage } from "./pages/HomePage";
+import { TopPage } from "./pages/TopPage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { EditProfilePage } from "./pages/EditProfilePage";
 import { AccountSettingsPage } from "./pages/AccountSettingsPage";
+import { MatchingPage } from "./pages/MatchingPage";
+import { StartCommunication } from "./pages/StartCommunication";
 
 import "./assets/styles/tailwind.css";
 
@@ -20,7 +22,7 @@ export default function App() {
           path="/"
           element={
             <PlainLayout>
-              <HomePage />
+              <TopPage />
             </PlainLayout>
           }
         />
@@ -61,6 +63,22 @@ export default function App() {
           element={
             <DefaultLayout>
               <AccountSettingsPage />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/match"
+          element={
+            <DefaultLayout>
+              <MatchingPage />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/start-communication"
+          element={
+            <DefaultLayout>
+              <StartCommunication />
             </DefaultLayout>
           }
         />

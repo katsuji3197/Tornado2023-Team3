@@ -1,5 +1,4 @@
 /* Matching.css */
-@import 'base.css';
 
 .matching-screen {
   background-color: #ffffff;
@@ -8,7 +7,7 @@
 
 .communication-status {
   color: #000000;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   height: 50px;
   padding-left: 20px;
   font-size: 16px;

@@ -1,5 +1,4 @@
 /* StartCommunication.css */
-@import 'base.css';
 * {
   color: #ffffff;
 }
@@ -12,7 +11,7 @@
 
 .communication-title {
   color: #000000;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   height: 50px;
   padding-left: 20px;
   font-size: 16px;
@@ -42,7 +41,7 @@
   height: 68px;
   width: 282px;
   border-radius: 12px;
-  background: linear-gradient(90deg, #9333EA 0%, #60A5FA 100%);
+  background: linear-gradient(90deg, #9333ea 0%, #60a5fa 100%);
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
