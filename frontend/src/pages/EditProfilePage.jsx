@@ -198,7 +198,7 @@ const EditProfilePage = () => {
 
       {/* 職業 */}
       <div className="occupation-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">職業</h2>
+        <h2 className="text-lg md:text-2xl">学校</h2>
         <select
           className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={occupation}
