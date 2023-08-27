@@ -1,0 +1,43 @@
+/* Header.css */
+@import 'base.css';
+
+.header {
+  background-color: #ffffff;
+  height: 1vh;
+  width: 100%;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.header-contents-logo {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.header-contents-logo a {
+  display: flex;
+}
+.header-contents-logo img {
+  width: auto; 
+}
+
+
+.header-contents-userImage {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.header-contents-userImage a {
+  display: flex;
+}
+.header-contents-userImage img {
+  background-color: #b279d5;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  overflow: hide;
+}
