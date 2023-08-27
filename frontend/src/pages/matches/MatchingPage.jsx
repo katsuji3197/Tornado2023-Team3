@@ -1,10 +1,10 @@
-import '../assets/styles/css/MatchingPage.css';
-import matchingWire        from '../assets/images/matching_wire.svg';
-import matchingAlienPurple from '../assets/images/matching_alien_purple.svg';
-import matchingAlienGray   from '../assets/images/matching_alien_gray.svg'
-import matchingDate        from '../assets/images/matching_date.svg';
-import matchingPin         from '../assets/images/matching_pin.svg';
-import matchingEdit        from '../assets/images/matching_edit.svg';
+import '../../assets/styles/css/MatchingPage.css';
+import matchingWire        from '../../assets/images/matching_wire.svg';
+import matchingAlienPurple from '../../assets/images/matching_alien_purple.svg';
+import matchingAlienGray   from '../../assets/images/matching_alien_gray.svg'
+import matchingDate        from '../../assets/images/matching_date.svg';
+import matchingPin         from '../../assets/images/matching_pin.svg';
+import matchingEdit        from '../../assets/images/matching_edit.svg';
 
 export const MatchingPage = () => {
   return (
