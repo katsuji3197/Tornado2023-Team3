@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { DefaultLayout } from "./layouts/DefaultLayout";
-import { PlainLayout } from "./layouts/PlainLayout";
+import { DefaultLayout }       from "./layouts/DefaultLayout";
+import { PlainLayout }         from "./layouts/PlainLayout";
 
 import { TopPage } from "./pages/TopPage";
 import { LoginPage } from "./pages/auth/LoginPage";
@@ -70,7 +70,7 @@ export default function App() {
           }
         />
         <Route
-          path="/match"
+          path="/matching"
           element={
             <DefaultLayout>
               <MatchingPage />
