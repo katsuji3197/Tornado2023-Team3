@@ -95,7 +95,6 @@ export const EditProfilePage = () => {
   const [birthdate, setBirthdate] = useState("");
   const [birthplace, setBirthplace] = useState("");
   const [residence, setResidence] = useState("");
-  const [occupation, setOccupation] = useState("");
   const [hobbies, setHobbies] = useState([]);
   const [newHobby, setNewHobby] = useState("");
   const [experience, setExperience] = useState("");
@@ -121,7 +120,7 @@ export const EditProfilePage = () => {
   };
 
   return (
-    <div className="edit-profile-container p-4 md:p-8 bg-blue-950 text-white min-h-screen space-y-6 md:space-y-32">
+    <div className="edit-profile-container p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
       <BackLink to="/mypage" label="マイページに戻る" />
 
@@ -134,7 +133,7 @@ export const EditProfilePage = () => {
       <div className="name-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">表示名</h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={name}
           onChange={handleNameChange}
           rows="1"
@@ -142,20 +141,23 @@ export const EditProfilePage = () => {
       </div>
 
       {/* 性別 */}
-      <RadioButtonGroup
-        options={genderOptions}
-        selectedValue={sex}
-        onChange={handleSexChange}
-        name="gender"
-        className="profile-text-section mb-4 md:mb-8"
-      />
+      <div>
+        <h2 className="text-lg md:text-2xl">性別</h2>
+        <RadioButtonGroup
+          options={genderOptions}
+          selectedValue={sex}
+          onChange={handleSexChange}
+          name="gender"
+          className="profile-text-section mb-4 md:mb-8"
+        />
+      </div>
 
       {/* 生年月日 */}
       <div className="birthdate-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">生年月日</h2>
+        <h2 className="text-lg md:text-2xl">年月日日</h2>
         <input
           type="date"
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={birthdate}
           onChange={(e) => setBirthdate(e.target.value)}
         />
@@ -165,7 +167,7 @@ export const EditProfilePage = () => {
       <div className="birthplace-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">出身地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-white rounded-xl shadow"
           value={birthplace}
           onChange={(e) => setBirthplace(e.target.value)}
         >
@@ -181,29 +183,13 @@ export const EditProfilePage = () => {
       <div className="residence-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl">居住地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={residence}
           onChange={(e) => setResidence(e.target.value)}
         >
           {prefectures.map((pref) => (
             <option value={pref} key={pref}>
               {pref}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* 職業 */}
-      <div className="occupation-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">職業</h2>
-        <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
-          value={occupation}
-          onChange={(e) => setOccupation(e.target.value)}
-        >
-          {jobCategories.map((job) => (
-            <option value={job} key={job}>
-              {job}
             </option>
           ))}
         </select>
@@ -230,7 +216,7 @@ export const EditProfilePage = () => {
 
         {/* 趣味の選択 */}
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value=""
           onChange={(e) => {
             const value = e.target.value;
@@ -260,11 +246,11 @@ export const EditProfilePage = () => {
             placeholder="新しい趣味を追加"
             value={newHobby}
             onChange={(e) => setNewHobby(e.target.value)}
-            className="p-2 md:p-4 rounded-md bg-blue-900 flex-grow"
+            className="p-2 md:p-4 bg-white rounded-xl shadow flex-grow"
           />
           <button
             onClick={handleAddHobby}
-            className="ml-2 p-2 md:p-4 rounded-md bg-blue-700"
+            className="ml-2 p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-white"
           >
             追加
           </button>
@@ -277,7 +263,7 @@ export const EditProfilePage = () => {
           その他、経験してきたことなど自由に書いてください
         </h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-blue-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
           value={experience}
           onChange={(e) => setExperience(e.target.value)}
           rows="5"
@@ -286,7 +272,7 @@ export const EditProfilePage = () => {
 
       {/* 変更を保存するボタン（実際には実装が必要） */}
       <div>
-        <button className="bg-blue-500 py-1 md:py-2 px-2 md:px-4 rounded-full">
+        <button className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
           変更を保存する
         </button>
       </div>
