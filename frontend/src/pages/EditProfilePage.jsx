@@ -95,7 +95,6 @@ const EditProfilePage = () => {
   const [birthdate, setBirthdate] = useState("");
   const [birthplace, setBirthplace] = useState("");
   const [residence, setResidence] = useState("");
-  const [occupation, setOccupation] = useState("");
   const [hobbies, setHobbies] = useState([]);
   const [newHobby, setNewHobby] = useState("");
   const [experience, setExperience] = useState("");
@@ -191,38 +190,6 @@ const EditProfilePage = () => {
           {prefectures.map((pref) => (
             <option value={pref} key={pref}>
               {pref}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* 学校 */}
-      <div className="occupation-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">学校</h2>
-        <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
-          value={occupation}
-          onChange={(e) => setOccupation(e.target.value)}
-        >
-          {jobCategories.map((job) => (
-            <option value={job} key={job}>
-              {job}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* 学部・学科 */}
-      <div className="occupation-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">学校</h2>
-        <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
-          value={occupation}
-          onChange={(e) => setOccupation(e.target.value)}
-        >
-          {jobCategories.map((job) => (
-            <option value={job} key={job}>
-              {job}
             </option>
           ))}
         </select>
