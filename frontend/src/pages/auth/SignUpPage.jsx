@@ -1,7 +1,7 @@
 // signupPage.jsx
 import { useState } from 'react';
-import '../assets/styles/css/SignUpPage.css';
-import titleLogo from '../assets/images/icon_header_Alien.svg';
+import '../../assets/styles/css/SignUpPage.css';
+import titleLogo from '../../assets/images/icon_header_Alien.svg';
 
 export const SignUpPage = () => {
   const [mail, setName] = useState('');

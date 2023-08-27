@@ -1,5 +1,5 @@
 // StartCommunication.jsx
-import '../assets/styles/css/StartCommunication.css';
+import '../../assets/styles/css/StartCommunication.css';
 
 export const StartCommunication = () => {
   return (
