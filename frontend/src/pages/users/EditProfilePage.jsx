@@ -139,12 +139,12 @@ export const EditProfilePage = () => {
       {/* 性別 */}
       
       <h2 className="text-lg md:text-2xl">性別</h2>
-      <span className="text-gray-900"><RadioButtonGroup
+      <span className><RadioButtonGroup
         options={genderOptions}
         selectedValue={sex}
         onChange={handleSexChange}
         name="gender"
-        className="profile-text-section mb-4 md:mb-8 text-gray-900"
+        className="profile-text-section mb-4 md:mb-8"
       /></span>
       
 
