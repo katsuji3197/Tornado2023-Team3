@@ -14,6 +14,13 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
       t.datetime :reset_password_sent_at
       t.boolean  :allow_password_change, :default => false
 
+      ## Trackable
+      t.integer  :sign_in_count, default: 0, null: false, comment: 'ログイン回数'
+      t.datetime :current_sign_in_at, comment: '現在のログイン日時'
+      t.datetime :last_sign_in_at, comment: '前回のログイン日時'
+      t.string   :current_sign_in_ip, comment: '現在のログインIP'
+      t.string   :last_sign_in_ip, comment: '前回のログインIP'
+
       ## Rememberable
       t.datetime :remember_created_at
 
@@ -31,10 +38,10 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
       ## User Info
       t.string  :first_name,  null: false, default: "", comment: '名'
       t.string  :last_name,   null: false, default: "", comment: '姓'
-      t.string  :name,        null: false, default: "", comment: 'ニックネーム'
+      t.string  :name,        null: false, default: "", comment: '名前'
       t.string  :email,       null: false, default: "", comment: 'メールアドレス'
-      t.integer :sex,         null: false, default: 0,  comment: '性別'
-      t.date    :birthdate,   null: false,              comment: '生年月日'
+      t.integer :sex,                                   comment: '性別'
+      t.date    :birthdate,                             comment: '生年月日'
       t.integer :hometown,                              comment: '出身地'
       t.integer :residence,                             comment: '居住地'
       t.string  :occupation,                            comment: '職業'

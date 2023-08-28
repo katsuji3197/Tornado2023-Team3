@@ -1,7 +1,6 @@
-// TopPage.jsx
-import '../assets/styles/css/TopPage.css'
-import titleLogo from '../assets/images/icon_header_Alien.svg'
-import { Link } from 'react-router-dom';
+import "../assets/styles/css/TopPage.css";
+import titleLogo from "../assets/images/icon_header_Alien.svg";
+import { Link } from "react-router-dom";
 
 export const TopPage = () => {
   return (
@@ -13,9 +12,12 @@ export const TopPage = () => {
         <div className="subtitle">未知との出会い</div>
       </div>
 
-      <div className="register"><Link to="/signup">新規登録</Link></div>
-      <div className="login"><Link to="/login">ログイン</Link></div>
-      
+      <Link to="/signup">
+        <div className="register">新規登録</div>
+      </Link>
+      <Link to="/login">
+        <div className="login">ログイン</div>
+      </Link>
     </div>
   );
-}
+};

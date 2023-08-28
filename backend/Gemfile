@@ -12,6 +12,7 @@ gem "rack-cors"
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
+gem 'rails-i18n'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
