@@ -22,7 +22,7 @@ const RadioButtonGroup = ({
             checked={selectedValue === option.value}
             onChange={() => onChange(option.value)}
           />
-          <span className="ml-2">{option.label}</span>
+          <span className="ml-2 text-gray-900">{option.label}</span>
         </label>
       ))}
     </div>
