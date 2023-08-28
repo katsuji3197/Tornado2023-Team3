@@ -107,7 +107,7 @@ export const EditProfilePage = () => {
   };
 
   const handleSexChange = (e) => {
-    setSex(Number(e.target.value));
+    setSex(Number(e));
   };
 
   console.log("from", from);
