@@ -1,7 +1,7 @@
 // LoginPage.jsx
 import { useState } from 'react';
-import '../assets/styles/css/LoginPage.css';
-import titleLogo from '../assets/images/icon_header_Alien.svg'
+import '../../assets/styles/css/LoginPage.css';
+import titleLogo from '../../assets/images/icon_header_Alien.svg'
 
 export const LoginPage = () => {
   const [name, setName] = useState('');
