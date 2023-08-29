@@ -1,20 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { DefaultLayout }       from "./layouts/DefaultLayout";
-import { PlainLayout }         from "./layouts/PlainLayout";
+import { DefaultLayout } from "./layouts/DefaultLayout";
+import { PlainLayout } from "./layouts/PlainLayout";
 
-import { TopPage }             from "./pages/TopPage";
-import { LoginPage }           from "./pages/auth/LoginPage";
-import { SignUpPage }          from "./pages/auth/SignUpPage";
-import { DashboardPage }       from "./pages/users/DashboardPage";
-import { EditProfilePage }     from "./pages/users/EditProfilePage";
+import { TopPage } from "./pages/TopPage";
+import { LoginPage } from "./pages/auth/LoginPage";
+import { SignUpPage } from "./pages/auth/SignUpPage";
+import { DashboardPage } from "./pages/users/DashboardPage";
+import { EditProfilePage } from "./pages/users/EditProfilePage";
 import { AccountSettingsPage } from "./pages/users/AccountSettingsPage";
-import { MatchingPage }        from "./pages/matches/MatchingPage";
-import { StartCommunication }  from "./pages/matches/StartCommunication";
-import { MatchInputPage }      from "./pages/matches/MatchInputPage";
-import { MatchResultPage }     from "./pages/matches/MatchResultPage";
-import { MatchWaitingPage }    from "./pages/matches/MatchWaitingPage";
-import { MatchedPage}          from "./pages/matches/MatchedPage.jsx";
+import { MatchingPage } from "./pages/matches/MatchingPage";
+import { StartCommunication } from "./pages/matches/StartCommunication";
+import { MatchInputPage } from "./pages/matches/MatchInputPage";
+import { MatchResultPage } from "./pages/matches/MatchResultPage";
+import { MatchWaitingPage } from "./pages/matches/MatchWaitingPage";
+import { MatchedPage } from "./pages/matches/MatchedPage.jsx";
 
 import "./assets/styles/tailwind.css";
 
