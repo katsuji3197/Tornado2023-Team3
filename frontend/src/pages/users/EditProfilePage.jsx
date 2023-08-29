@@ -110,7 +110,6 @@ export const EditProfilePage = () => {
     setSex(Number(e));
   };
 
-  console.log("from", from);
   return (
     <div className="edit-profile-container text-gray-900 p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
@@ -137,16 +136,17 @@ export const EditProfilePage = () => {
       </div>
 
       {/* 性別 */}
-      
+
       <h2 className="text-lg md:text-2xl text-gray-900">性別</h2>
-      <span className><RadioButtonGroup
-        options={genderOptions}
-        selectedValue={sex}
-        onChange={handleSexChange}
-        name="gender"
-        className="profile-text-section mb-4 md:mb-8"
-      /></span>
-      
+      <span>
+        <RadioButtonGroup
+          options={genderOptions}
+          selectedValue={sex}
+          onChange={handleSexChange}
+          name="gender"
+          className="profile-text-section mb-4 md:mb-8"
+        />
+      </span>
 
       {/* 生年月日 */}
       <div className="birthdate-section mb-4 md:mb-8">
@@ -198,7 +198,10 @@ export const EditProfilePage = () => {
         {/* 選択された趣味を表示 */}
         <div className="selected-hobbies mt-2 md:mt-4">
           {hobbies.map((hobby) => (
-            <span key={hobby} className="bg-blue-700 rounded px-2 py-1 mr-2">
+            <span
+              key={hobby}
+              className="inline-block bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-white p-2 md:p-4 mr-2 mb-2"
+            >
               {hobby}
               <button
                 onClick={() => removeSelectedHobby(hobby)}

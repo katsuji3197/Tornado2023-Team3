@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../App";
@@ -32,11 +33,10 @@ export const LoginPage = () => {
     // ログイン処理
     try {
       const res = await signIn({ email, password });
-
-      console.log(res);
-      console.log("currentUser", currentUser);
-
       if (res.status === 200) {
+        Cookies.set("_access_token", res.headers["access-token"]);
+        Cookies.set("_client", res.headers["client"]);
+        Cookies.set("_uid", res.headers["uid"]);
         setIsSignedIn(true);
         setCurrentUser(res.data.data);
         navigate("/mypage");

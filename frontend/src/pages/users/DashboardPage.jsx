@@ -1,7 +1,8 @@
+import Cookies from "js-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../App";
-import { signOut, getCurrentUser } from "../../api/auth";
+import { signOut } from "../../api/auth";
 import { AlertMessage } from "../../components/AlertMessage";
 
 // const user = {
@@ -21,9 +22,6 @@ export const DashboardPage = () => {
     useContext(AuthContext);
   const [alertMessageOpen, setAlertMessageOpen] = useState(false);
 
-  const res = getCurrentUser();
-  console.log(res);
-
   if (!isSignedIn) {
     navigate("/");
     return null;
@@ -36,7 +34,9 @@ export const DashboardPage = () => {
       const response = await signOut();
 
       if (response.status === 200) {
-        // Clear user session/context
+        Cookies.remove("_access_token");
+        Cookies.remove("_client");
+        Cookies.remove("_uid");
         setIsSignedIn(false);
         setCurrentUser(null);
 

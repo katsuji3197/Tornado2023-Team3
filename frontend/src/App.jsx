@@ -45,12 +45,10 @@ const useAuth = () => {
   const handleGetCurrentUser = async () => {
     try {
       const res = await getCurrentUser();
-      console.log("res", res);
 
       if (res?.data.isLogin === true) {
         setIsSignedIn(true);
         setCurrentUser(res?.data.data);
-        console.log(res?.data.data);
       } else {
         console.log("No current user");
       }
@@ -79,12 +77,10 @@ const PrivateRouteContent = ({
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isSignedIn) {
+    if (!isSignedIn && !loading) {
       navigate("/");
     }
-  }, [isSignedIn, navigate]);
-  console.log("isSignedIn", isSignedIn);
-  console.log("loading", loading);
+  }, [isSignedIn, loading, navigate]);
 
   if (loading) {
     return null;

@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import Cookies from "js-cookie";
 import "../../assets/styles/css/SignUpPage.css";
 import titleLogo from "../../assets/images/icon_header_Alien.svg";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,9 @@ export const SignUpPage = () => {
       const res = await signUp(params);
 
       if (res.status === 200) {
+        Cookies.set("_access_token", res.headers["access-token"]);
+        Cookies.set("_client", res.headers["client"]);
+        Cookies.set("_uid", res.headers["uid"]);
         setIsSignedIn(true);
         setCurrentUser(res.data.data);
         navigate("/mypage");
