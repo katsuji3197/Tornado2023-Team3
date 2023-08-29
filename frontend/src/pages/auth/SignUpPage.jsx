@@ -1,4 +1,4 @@
-// signupPage.jsx
+// SignUpPage.jsx
 import { useState } from 'react';
 import '../../assets/styles/css/SignUpPage.css';
 import titleLogo from '../../assets/images/icon_header_Alien.svg';

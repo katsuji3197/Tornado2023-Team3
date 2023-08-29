@@ -13,7 +13,6 @@ export const TopPage = () => {
         <div className="subtitle">未知との出会い</div>
       </div>
 
-
       <div className="register"><Link to="/signup">新規登録</Link></div>
       <div className="login"><Link to="/login">ログイン</Link></div>
       

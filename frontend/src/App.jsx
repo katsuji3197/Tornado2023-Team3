@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { DefaultLayout }       from "./layouts/DefaultLayout";
-import { PlainLayout }         from "./layouts/PlainLayout";
+import { DefaultLayout } from "./layouts/DefaultLayout";
+import { PlainLayout } from "./layouts/PlainLayout";
 
 import { TopPage } from "./pages/TopPage";
 import { LoginPage } from "./pages/auth/LoginPage";
@@ -14,6 +14,7 @@ import { StartCommunication } from "./pages/matches/StartCommunication";
 import { MatchInputPage } from "./pages/matches/MatchInputPage";
 import { MatchResultPage } from "./pages/matches/MatchResultPage";
 import { MatchWaitingPage } from "./pages/matches/MatchWaitingPage";
+import { MatchedPage } from "./pages/matches/MatchedPage.jsx";
 
 import "./assets/styles/tailwind.css";
 
@@ -106,6 +107,14 @@ export default function App() {
           element={
             <DefaultLayout>
               <MatchWaitingPage />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/matched"
+          element={
+            <DefaultLayout>
+              <MatchedPage />
             </DefaultLayout>
           }
         />

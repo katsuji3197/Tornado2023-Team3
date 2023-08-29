@@ -1,4 +1,5 @@
 /* Matching.css */
+@import 'base.css';
 
 .matching-screen {
   background-color: #ffffff;
@@ -30,6 +31,7 @@
 }
 
 .communication-text {
+  color: #000000;
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 8px;
@@ -37,6 +39,7 @@
 }
 
 .serching-text {
+  color: #000000;
   font-weight: bold;
   letter-spacing: 8px;
   margin-top: 20px;
@@ -71,6 +74,7 @@
 }
 
 .date-text {
+  color: #000000;
   padding-top: 40px;
   padding-left: 10px;
   font-weight: bold;
@@ -78,6 +82,7 @@
 }
 
 .date-data {
+  color: #000000;
   margin-top: 10px;
   font-weight: bold;
   letter-spacing: 1px;
