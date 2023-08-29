@@ -145,7 +145,7 @@ export const MatchInputPage = () => {
             <h2 className="text-black ml-2 w-full p-2 md:p-4 bg-white rounded-xl text-center shadow-xl">バックグランドの編集</h2>
           </div>
         </Link>
-        <Link to={"/match-waiting"} state={{ from: "/match-input" }}>
+        <Link to={"/matching"} state={{ from: "/match-input" }}>
           <div className="background-section mb-4 md:mb-8">
             <h2 className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-center shadow-xl">更新を開始する👽</h2>
           </div>
