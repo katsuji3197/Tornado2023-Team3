@@ -1,10 +1,14 @@
 import { useLocation, Link } from "react-router-dom";
-import myPageIcon from "../assets/images/icon_header_UnknownUser.svg";
-import accountSettingsIcon from "../assets/images/icon_header_UnknownUser.svg";
-import editProfileIcon from "../assets/images/icon_header_UnknownUser.svg";
+import mypageIcon from "../assets/images/icon_footer_user.svg";
 import wireIcon from "../assets/images/icon_footer_wire.svg";
 import recruitIcon from "../assets/images/icon_footer_rocket.svg";
 import chatIcon from "../assets/images/icon_footer_chat.svg";
+{/* wireIconActive, recruitIconActive chatIconActive mypageIconActive */}
+import wireIconActive from "../assets/images/icon_footer_wire_colored.svg";
+import recruitIconActive from "../assets/images/icon_footer_rocket_colored.svg";
+import chatIconActive from "../assets/images/icon_footer_chat_colored.svg";
+import mypageIconActive from "../assets/images/icon_footer_user_colored.svg";
+
 
 
 export const Footer = () => {
@@ -13,7 +17,7 @@ export const Footer = () => {
   const isCurrentRoute = (route) => location.pathname === route;
 
   return (
-    <footer className="fixed bottom-0 w-full bg-indigo-950 py-2 shadow-top">
+    <footer className="fixed bottom-0 w-full bg-white py-2 shadow-top">
       <div className="flex justify-between px-5">
         {/* 交信 */}
         <Link
@@ -23,7 +27,7 @@ export const Footer = () => {
           }`}
         >
           <img
-            src={wireIcon}
+            src={isCurrentRoute("/match") ? wireIconActive : wireIcon}
             alt="Matching"
             className={`w-${isCurrentRoute("/match") ? "8" : "6"} h-${
               isCurrentRoute("/match") ? "8" : "6"
@@ -34,18 +38,18 @@ export const Footer = () => {
         
         {/* 募集 ※TODO:どこにリンクするかわからない*/}
         <Link
-          to="/mypage"
+          to="/"
           className={`flex flex-col items-center ${
-            isCurrentRoute("/mypage") ? "text-white" : "text-gray-400"
+            isCurrentRoute("/") ? "text-white" : "text-gray-400"
           }`}
         >
           <img
-            src={recruitIcon}
+            src={isCurrentRoute("/") ? recruitIconActive : recruitIcon}            
             alt="Recruit"
             className={`w-${
-              isCurrentRoute("/mypage") ? "8" : "6"
+              isCurrentRoute("/") ? "8" : "6"
             } h-${
-              isCurrentRoute("/mypage") ? "8" : "6"
+              isCurrentRoute("/") ? "8" : "6"
             } mb-1`}
           />
           <span className="text-xs">募集</span>
@@ -58,7 +62,7 @@ export const Footer = () => {
           }`}
         >
           <img
-            src={chatIcon}
+            src={isCurrentRoute("/start-communication") ? chatIconActive : chatIcon}
             alt="Chat"
             className={`w-${
               isCurrentRoute("/start-communication") ? "8" : "6"
@@ -71,13 +75,13 @@ export const Footer = () => {
 
         {/*My Page*/}
         <Link
-          to="/edit-profile"
+          to="/mypage"
           className={`flex flex-col items-center ${
             isCurrentRoute("/mypage") ? "text-white" : "text-gray-400"
           }`}
         >
           <img
-            src={myPageIcon}
+            src={isCurrentRoute("/mypage") ? mypageIconActive : mypageIcon}
             alt="Edit Profile"
             className={`w-${isCurrentRoute("/mypage") ? "8" : "6"} h-${
               isCurrentRoute("/mypage") ? "8" : "6"
