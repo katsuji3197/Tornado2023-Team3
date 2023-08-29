@@ -1,5 +1,5 @@
 /* MatchedPage.css */
-@import 'base.css';
+@import "base.css";
 
 .matched-screen {
   height: 80vh;
@@ -86,7 +86,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  
 }
 .upper-left {
   height: 100%;
@@ -110,10 +109,8 @@
 }
 .shop-label {
   border-radius: 6px;
-  background: #8B49EF; 
-  color: #ffffff; 
-  height: auto;
-  width: 40px;
+  background: #8b49ef;
+  color: #ffffff;
   font-size: 16px;
   text-align: center;
   padding: 0 0;
@@ -138,7 +135,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top:  5px;
+  padding-top: 5px;
 }
 
 .date-title-wrap {
