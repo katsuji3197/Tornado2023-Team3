@@ -1,66 +1,80 @@
 import { useLocation, Link } from "react-router-dom";
-import myPageIcon from "../assets/images/icon_header_UnknownUser.svg";
-import accountSettingsIcon from "../assets/images/icon_header_UnknownUser.svg";
-import editProfileIcon from "../assets/images/icon_header_UnknownUser.svg";
+import mypageIcon from "../assets/images/icon_footer_user.svg";
+import wireIcon from "../assets/images/icon_footer_wire.svg";
+import recruitIcon from "../assets/images/icon_footer_rocket.svg";
+import chatIcon from "../assets/images/icon_footer_chat.svg";
+import wireIconActive from "../assets/images/icon_footer_wire_colored.svg";
+import recruitIconActive from "../assets/images/icon_footer_rocket_colored.svg";
+import chatIconActive from "../assets/images/icon_footer_chat_colored.svg";
+import mypageIconActive from "../assets/images/icon_footer_user_colored.svg";
+
+import "../assets/styles/css/Footer.css";
 
 export const Footer = () => {
   const location = useLocation();
 
+  const MENU_ITEMS = [
+    {
+      to: "/start-communication",
+      defaultIcon: wireIcon,
+      activeIcon: wireIconActive,
+      alt: "Matching",
+      label: "交信",
+    },
+    {
+      // TODO: 仮のURL
+      to: "/account-settings",
+      defaultIcon: recruitIcon,
+      activeIcon: recruitIconActive,
+      alt: "Recruit",
+      label: "募集",
+    },
+    {
+      // TODO: 仮のURL
+      to: "/edit-profile",
+      defaultIcon: chatIcon,
+      activeIcon: chatIconActive,
+      alt: "Chat",
+      label: "チャット",
+    },
+    {
+      to: "/mypage",
+      defaultIcon: mypageIcon,
+      activeIcon: mypageIconActive,
+      alt: "Edit Profile",
+      label: "マイページ",
+    },
+  ];
+
   const isCurrentRoute = (route) => location.pathname === route;
 
   return (
-    <footer className="fixed bottom-0 w-full bg-indigo-950 py-2 shadow-top">
+    <footer className="fixed bottom-0 w-full bg-white py-2 shadow-top">
       <div className="flex justify-between px-5">
-        <Link
-          to="/mypage"
-          className={`flex flex-col items-center ${
-            isCurrentRoute("/mypage") ? "text-white" : "text-gray-400"
-          }`}
-        >
-          <img
-            src={myPageIcon}
-            alt="My Page"
-            className={`w-${isCurrentRoute("/mypage") ? "8" : "6"} h-${
-              isCurrentRoute("/mypage") ? "8" : "6"
-            } mb-1 bg-purple-500 rounded-full`}
-          />
-          <span className="text-xs">My Page</span>
-        </Link>
-
-        <Link
-          to="/account-settings"
-          className={`flex flex-col items-center ${
-            isCurrentRoute("/account-settings") ? "text-white" : "text-gray-400"
-          }`}
-        >
-          <img
-            src={accountSettingsIcon}
-            alt="Account Settings"
-            className={`w-${
-              isCurrentRoute("/account-settings") ? "8" : "6"
-            } h-${
-              isCurrentRoute("/account-settings") ? "8" : "6"
-            } mb-1 bg-purple-500 rounded-full`}
-          />
-          <span className="text-xs">Account Settings</span>
-        </Link>
-
-        <Link
-          to={"/edit-profile"}
-          state={{ from: "/mypage" }}
-          className={`flex flex-col items-center ${
-            isCurrentRoute("/edit-profile") ? "text-white" : "text-gray-400"
-          }`}
-        >
-          <img
-            src={editProfileIcon}
-            alt="Edit Profile"
-            className={`w-${isCurrentRoute("/edit-profile") ? "8" : "6"} h-${
-              isCurrentRoute("/edit-profile") ? "8" : "6"
-            } mb-1 bg-purple-500 rounded-full`}
-          />
-          <span className="text-xs">Edit Profile</span>
-        </Link>
+        {MENU_ITEMS.map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className={`flex flex-col items-center ${
+              isCurrentRoute(item.to) ? "text-white" : "text-gray-400"
+            }`}
+          >
+            <img
+              src={isCurrentRoute(item.to) ? item.activeIcon : item.defaultIcon}
+              alt={item.alt}
+              className="w-8 h-8"
+            />
+            <span
+              className={
+                isCurrentRoute(item.to)
+                  ? "text-xs font-bold footer-label-active"
+                  : "text-xs text-gray-500"
+              }
+            >
+              {item.label}
+            </span>
+          </Link>
+        ))}
       </div>
     </footer>
   );

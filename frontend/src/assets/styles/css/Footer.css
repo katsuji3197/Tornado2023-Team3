@@ -1,0 +1,8 @@
+@import "base.css";
+
+.footer-label-active {
+  background: linear-gradient(90deg, #9334eb 0%, #61a5fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
