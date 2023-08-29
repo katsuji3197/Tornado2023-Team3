@@ -62,20 +62,7 @@ export const EditProfilePage = () => {
     "鹿児島県",
     "沖縄県",
   ];
-  const jobCategories = [
-    "IT・通信",
-    "医療・福祉",
-    "建築・不動産",
-    "教育・研究",
-    "金融・保険",
-    "製造",
-    "流通・小売",
-    "サービス",
-    "広告・マスコミ",
-    "公務員",
-    "その他",
-    "学生",
-  ];
+
   const [hobbiesList, setHobbiesList] = useState([
     "読書",
     "映画鑑賞",
@@ -120,12 +107,12 @@ export const EditProfilePage = () => {
   };
 
   const handleSexChange = (e) => {
-    setSex(Number(e.target.value));
+    setSex(Number(e));
   };
 
   console.log("from", from);
   return (
-    <div className="edit-profile-container p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
+    <div className="edit-profile-container text-gray-900 p-4 md:p-8 bg-gray-50 ext-neutral-800 min-h-screen space-y-6 md:space-y-32">
       {/* マイページに戻るリンク */}
       {from === "/mypage" ? (
         <BackLink to="/mypage" label="マイページに戻る" />
@@ -134,15 +121,15 @@ export const EditProfilePage = () => {
       )}
 
       {/* ページのタイトル */}
-      <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8">
+      <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-gray-900">
         プロフィール編集
       </h1>
 
       {/* 表示名 */}
       <div className="name-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">表示名</h2>
+        <h2 className="text-lg md:text-2xl text-gray-900">表示名</h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl text-gray-900"
           value={name}
           onChange={handleNameChange}
           rows="1"
@@ -150,23 +137,23 @@ export const EditProfilePage = () => {
       </div>
 
       {/* 性別 */}
-      <div>
-        <h2 className="text-lg md:text-2xl">性別</h2>
-        <RadioButtonGroup
-          options={genderOptions}
-          selectedValue={sex}
-          onChange={handleSexChange}
-          name="gender"
-          className="profile-text-section mb-4 md:mb-8"
-        />
-      </div>
+      
+      <h2 className="text-lg md:text-2xl text-gray-900">性別</h2>
+      <span className><RadioButtonGroup
+        options={genderOptions}
+        selectedValue={sex}
+        onChange={handleSexChange}
+        name="gender"
+        className="profile-text-section mb-4 md:mb-8"
+      /></span>
+      
 
       {/* 生年月日 */}
       <div className="birthdate-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">年月日日</h2>
+        <h2 className="text-lg md:text-2xl text-gray-900">年月日日</h2>
         <input
           type="date"
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl text-gray-900"
           value={birthdate}
           onChange={(e) => setBirthdate(e.target.value)}
         />
@@ -174,9 +161,9 @@ export const EditProfilePage = () => {
 
       {/* 出身地 */}
       <div className="birthplace-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">出身地</h2>
+        <h2 className="text-lg md:text-2xl text-gray-900">出身地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-white rounded-xl shadow-xl text-gray-900"
           value={birthplace}
           onChange={(e) => setBirthplace(e.target.value)}
         >
@@ -190,9 +177,9 @@ export const EditProfilePage = () => {
 
       {/* 居住地 */}
       <div className="residence-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">居住地</h2>
+        <h2 className="text-lg md:text-2xl text-gray-900">居住地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl text-gray-900"
           value={residence}
           onChange={(e) => setResidence(e.target.value)}
         >
@@ -206,7 +193,7 @@ export const EditProfilePage = () => {
 
       {/* 趣味 */}
       <div className="hobbies-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">趣味</h2>
+        <h2 className="text-lg md:text-2xl text-gray-900">趣味</h2>
 
         {/* 選択された趣味を表示 */}
         <div className="selected-hobbies mt-2 md:mt-4">
@@ -225,7 +212,7 @@ export const EditProfilePage = () => {
 
         {/* 趣味の選択 */}
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl text-gray-900"
           value=""
           onChange={(e) => {
             const value = e.target.value;
@@ -255,7 +242,7 @@ export const EditProfilePage = () => {
             placeholder="新しい趣味を追加"
             value={newHobby}
             onChange={(e) => setNewHobby(e.target.value)}
-            className="p-2 md:p-4 bg-white rounded-xl shadow flex-grow"
+            className="p-2 md:p-4 bg-white rounded-xl shadow-xl flex-grow text-gray-900"
           />
           <button
             onClick={handleAddHobby}
@@ -268,11 +255,11 @@ export const EditProfilePage = () => {
 
       {/* その他、経験してきたことなど自由に書いてください */}
       <div className="experience-section mb-4 md:mb-8">
-        <h2 className="text-lg md:text-2xl">
+        <h2 className="text-lg md:text-2xl text-gray-900">
           その他、経験してきたことなど自由に書いてください
         </h2>
         <textarea
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl"
           value={experience}
           onChange={(e) => setExperience(e.target.value)}
           rows="5"
