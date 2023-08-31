@@ -6,6 +6,7 @@ import matchingAlienPurple from "../../assets/images/matching_alien_purple.svg";
 import matchedCafe from "../../assets/images/matched_cafe.png";
 import matchingDate from "../../assets/images/matching_date.svg";
 import matchingPin from "../../assets/images/matching_pin.svg";
+import { Link } from "react-router-dom";
 
 export const MatchedPage = () => {
   return (
@@ -67,18 +68,21 @@ const InfoCard = () => {
           </div>
         </div>
 
-        <div className="btn-wrap">
-          <div className="alien-note-wrap">
-            <img src={matchedAlienGradation} alt="matched_alien_gradation" />
-            <div className="alien-note-title">エイリアンノート</div>
-          </div>
-
-          <div className="google-map-wrap">
-            <img src={matchingPin} alt="matching_pin" />
-            <div className="google-map-title">GoogleMapで確認</div>
+        
+            <div className="btn-wrap">
+              <Link to={"/note"} state={{ from: "/matched" }}> 
+                <div className="alien-note-wrap">
+                  <img src={matchedAlienGradation} alt="matched_alien_gradation" />
+                <div className="alien-note-title">エイリアンノート</div>
+              </div>
+              </Link>
+        
+              <div className="google-map-wrap">
+                <img src={matchingPin} alt="matching_pin" />
+              <div className="google-map-title">GoogleMapで確認</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
