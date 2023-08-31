@@ -31,7 +31,7 @@ export const Footer = () => {
     },
     {
       // TODO: 仮のURL
-      to: "/edit-profile",
+      to: "/message",
       defaultIcon: chatIcon,
       activeIcon: chatIconActive,
       alt: "Chat",
