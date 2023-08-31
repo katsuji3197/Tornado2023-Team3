@@ -1,13 +1,11 @@
 import "../../assets/styles/css/MatchedPage.css";
 
-import matchedCheck from "../../assets/images/matched_check.svg";
 import matchedAlienGradation from "../../assets/images/matched_alien_gradation.svg";
-import matchingAlienPurple from "../../assets/images/matching_alien_purple.svg";
 import { Link } from "react-router-dom";
 
 export const NotePage = () => {
   return (
-    <div className="matched-screen">
+    <div className="matched-screen bg-gray-50">
       <header className="communication-status">エイリアンノート</header>
       <div className="match-input-container p-4 md:p-8 bg-gray-50 text-black min-h-screen space-y-6 md:space-y-32">
         {/* ページのタイトル */}
@@ -26,7 +24,7 @@ export const NotePage = () => {
               <div className="text-xl">hoge田 hoge男</div>
               <div>20歳 男性</div>
             </div>
-            <div>　　　　　　　&gt;</div>
+            <div className="ml-28">&gt;</div>
           </div>
         </Link>
         <Link to={"/back-alien"} state={{ from: "/note" }}>
@@ -36,7 +34,7 @@ export const NotePage = () => {
               <div className="text-xl">hoge田 hoge男</div>
               <div>20歳 男性</div>
             </div>
-            <div>　　　　　　　&gt;</div>
+            <div className="ml-28">&gt;</div>
           </div>
         </Link>
         <Link to={"/back-alien"} state={{ from: "/note" }}>
@@ -46,7 +44,7 @@ export const NotePage = () => {
               <div className="text-xl">hoge田 hoge男</div>
               <div>20歳 男性</div>
             </div>
-            <div>　　　　　　　&gt;</div>
+            <div className="ml-28">&gt;</div>
           </div>
         </Link>
         <Link to={"/back-alien"} state={{ from: "/note" }}>
@@ -56,7 +54,7 @@ export const NotePage = () => {
               <div className="text-xl">hoge田 hoge男</div>
               <div>20歳 男性</div>
             </div>
-            <div>　　　　　　　&gt;</div>
+            <div className="ml-28">&gt;</div>
           </div>
         </Link>
         <Link to={"/back-alien"} state={{ from: "/note" }}>
@@ -66,7 +64,7 @@ export const NotePage = () => {
               <div className="text-xl">hoge田 hoge男</div>
               <div>20歳 男性</div>
             </div>
-            <div>　　　　　　　&gt;</div>
+            <div className="ml-28">&gt;</div>
           </div>
         </Link>
         <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8">交信書</h1>
