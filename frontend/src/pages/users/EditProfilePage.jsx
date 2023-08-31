@@ -163,7 +163,7 @@ export const EditProfilePage = () => {
       <div className="birthplace-section mb-4 md:mb-8">
         <h2 className="text-lg md:text-2xl text-gray-900">出身地</h2>
         <select
-          className="mt-2 md:mt-4 w-full p-2 md:p-4 rounded-md bg-white rounded-xl shadow-xl text-gray-900"
+          className="mt-2 md:mt-4 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl text-gray-900"
           value={birthplace}
           onChange={(e) => setBirthplace(e.target.value)}
         >
