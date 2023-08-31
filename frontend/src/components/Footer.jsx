@@ -23,7 +23,7 @@ export const Footer = () => {
     },
     {
       // TODO: 仮のURL
-      to: "/account-settings",
+      to: "/recruit",
       defaultIcon: recruitIcon,
       activeIcon: recruitIconActive,
       alt: "Recruit",

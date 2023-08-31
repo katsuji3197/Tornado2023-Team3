@@ -24,6 +24,8 @@ import { MatchWaitingPage } from "./pages/matches/MatchWaitingPage";
 import { MatchedPage } from "./pages/matches/MatchedPage.jsx";
 import { MessagePage } from "./pages/messages/MessagePage";
 import { NotePage } from "./pages/matches/Aliennote";
+import { RecruitListPage } from "./pages/recruit/RecruitListPage";
+import { CreateRecruitPage } from "./pages/recruit/CreateRecruitPage";
 
 import { getCurrentUser } from "./api/auth";
 
@@ -226,6 +228,24 @@ export const App = () => {
             element={
               <PrivateRouteContent
                 component={NotePage}
+                layout={DefaultLayout}
+              />
+            }
+          />
+          <Route
+            path="/recruit"
+            element={
+              <PrivateRouteContent
+                component={RecruitListPage}
+                layout={DefaultLayout}
+              />
+            }
+          />
+          <Route
+            path="/recruit/new"
+            element={
+              <PrivateRouteContent
+                component={CreateRecruitPage}
                 layout={DefaultLayout}
               />
             }
