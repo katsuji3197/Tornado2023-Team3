@@ -221,7 +221,6 @@ export const App = () => {
               />
             }
           />
-
           <Route
             path="/note"
             element={

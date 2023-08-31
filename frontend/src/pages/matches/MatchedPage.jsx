@@ -68,21 +68,20 @@ const InfoCard = () => {
           </div>
         </div>
 
-        
-            <div className="btn-wrap">
-              <Link to={"/note"} state={{ from: "/matched" }}> 
-                <div className="alien-note-wrap">
-                  <img src={matchedAlienGradation} alt="matched_alien_gradation" />
-                <div className="alien-note-title">エイリアンノート</div>
-              </div>
-              </Link>
-        
-              <div className="google-map-wrap">
-                <img src={matchingPin} alt="matching_pin" />
-              <div className="google-map-title">GoogleMapで確認</div>
+        <div className="btn-wrap">
+          <Link to={"/note"} state={{ from: "/matched" }}>
+            <div className="alien-note-wrap">
+              <img src={matchedAlienGradation} alt="matched_alien_gradation" />
+              <div className="alien-note-title">エイリアンノート</div>
             </div>
+          </Link>
+
+          <div className="google-map-wrap">
+            <img src={matchingPin} alt="matching_pin" />
+            <div className="google-map-title">GoogleMapで確認</div>
           </div>
         </div>
       </div>
+    </div>
   );
 };
