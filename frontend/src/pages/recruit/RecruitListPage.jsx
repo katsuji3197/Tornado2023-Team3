@@ -9,9 +9,9 @@ export const RecruitListPage = () => {
     <div className="bg-white">
       {" "}
       {/* 背景色を白に変更 */}
-      <div className="bg-gray-300">募集</div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-        <div className="w-5/6">
+      <div className="communication-status">募集</div>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 mx-3">
+        <div className="w-full md:w-3/4">
           <RecruitCard />
           <RecruitCard />
           <RecruitCard />
@@ -33,21 +33,19 @@ export const RecruitListPage = () => {
 
 const RecruitCard = () => {
   return (
-    <div className="my-4 flex flex-col items-center justify-center p-4 bg-gray-100">
+    <div className=" flex flex-col items-center justify-center p-2 bg-gray-100">
       <div className="w-full bg-white rounded-xl p-6 shadow-lg">
         {/* ユーザー情報 */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center">
-            <img src={userIcon} alt="userIcon" />
-            <p className="text-md md:text-2xl ml-2">hoge田hoge男</p>
-          </div>
+        <div className="flex items-center justify-around">
+          <img src={userIcon} alt="userIcon" />
+          <p>エイリアン１号</p>
           <p className="text-gray-500">3分前</p>
         </div>
 
         {/* イベント詳細 */}
         <div className="flex items-center justify-between mb-4">
           <p>昼ご飯食べに行こー</p>
-          <button className="text-white ml-2 p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
+          <button className="text-white p-2 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
             <div className="flex items-center">
               <img src={rocketIcon} alt="rocketIcon" />
               <span className="text-white ml-2">参加</span>
