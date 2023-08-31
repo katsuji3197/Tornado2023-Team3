@@ -4,12 +4,12 @@ import calenderIconActive from "../../assets/images/matching_date.svg";
 import pinIconActive from "../../assets/images/matching_pin.svg";
 export const CreateRecruitPage = () => {
   return (
-    <div>
+    <>
       <div className="bg-gray-300">
         <BackLink to="/recruit" label="募集する" />
       </div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-        <div className="w-3/4">
+      <div className="flex flex-col items-center justify-center bg-gray-100 mx-5">
+        <div className="w-full md:w-3/4">
           {/* 募集内容 */}
           <div className="name-section mb-4 md:mb-8">
             <div className="flex items-center">
@@ -68,6 +68,6 @@ export const CreateRecruitPage = () => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
