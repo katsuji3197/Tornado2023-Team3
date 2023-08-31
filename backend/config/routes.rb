@@ -11,7 +11,13 @@ Rails.application.routes.draw do
         resources :sessions, only: %i[index]
       end
 
-      resources :users, only: %i[index show]
+      resources :users, only: %i[index show update destroy]
+      resources :matches, only: %i[create] do
+        collection do
+          post :find_match
+        end
+      end
+      resources :matched_users, only: %i[create update]
     end
   end
 end
