@@ -27,3 +27,9 @@ bundle:
 
 seed:
 	docker-compose run --rm backend bin/rails db:seed
+
+rubocop:
+	docker-compose run --rm backend bundle exec rubocop
+
+rubocop-fix:
+	docker-compose run --rm backend bundle exec rubocop -a
