@@ -22,6 +22,7 @@ import { MatchInputPage } from "./pages/matches/MatchInputPage";
 import { MatchResultPage } from "./pages/matches/MatchResultPage";
 import { MatchWaitingPage } from "./pages/matches/MatchWaitingPage";
 import { MatchedPage } from "./pages/matches/MatchedPage.jsx";
+import { MessagePage } from "./pages/messages/MessagePage";
 
 import { getCurrentUser } from "./api/auth";
 
@@ -206,6 +207,15 @@ export const App = () => {
             element={
               <PrivateRouteContent
                 component={MatchedPage}
+                layout={DefaultLayout}
+              />
+            }
+          />
+          <Route
+            path="/message"
+            element={
+              <PrivateRouteContent
+                component={MessagePage}
                 layout={DefaultLayout}
               />
             }
