@@ -78,11 +78,6 @@ export const NotePage = () => {
             Coming Soon
           </h2>
         </div>
-        <div className="background-section mb-4 md:mb-8">
-          <h2 className="text-gray-50 ml-2 w-full p-2 md:p-4 bg-gray-50 rounded-xl text-center">
-            Coming Soon
-          </h2>
-        </div>
       </div>
     </div>
   );
