@@ -9,8 +9,7 @@ import titleLogo from "../../assets/images/icon_header_Alien.svg";
 import "../../assets/styles/css/LoginPage.css";
 
 export const LoginPage = () => {
-  const { setIsSignedIn, setCurrentUser, currentUser } =
-    useContext(AuthContext);
+  const { setIsSignedIn, setCurrentUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
