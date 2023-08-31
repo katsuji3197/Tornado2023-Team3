@@ -62,7 +62,7 @@ export const AccountSettingsPage = () => {
       <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-id"
-        className="block p-2 hover:bg-blue-900 rounded transition"
+        className="block p-2 hover:bg-gray-200 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
@@ -77,7 +77,7 @@ export const AccountSettingsPage = () => {
       <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-email"
-        className="block p-2 hover:bg-blue-900 rounded transition"
+        className="block p-2 hover:bg-gray-200 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
@@ -92,7 +92,7 @@ export const AccountSettingsPage = () => {
       <div className="ml-2 w-full border border-gray-200" />
       <Link
         to="/edit-password"
-        className="block p-2 hover:bg-blue-900 rounded transition"
+        className="block p-2 hover:bg-gray-200 rounded transition"
       >
         <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
