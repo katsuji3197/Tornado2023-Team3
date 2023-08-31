@@ -13,12 +13,14 @@ export const RecruitListPage = () => {
                 募集
             </div>
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-            <RecruitCard />
-            <RecruitCard />
-            <RecruitCard />
-            <RecruitCard />
-            <RecruitCard />
-            <RecruitCard />
+                <div className="w-5/6"> 
+                    <RecruitCard />
+                    <RecruitCard />
+                    <RecruitCard />
+                    <RecruitCard />
+                    <RecruitCard />
+                    <RecruitCard />
+                </div>
             </div>
             {/* 募集作成ボタン */}
             <Link 
@@ -33,41 +35,39 @@ export const RecruitListPage = () => {
 
 const RecruitCard = () => {
     return (
-        <div className="flex flex-col items-center justify-center p-4 bg-gray-100">
-            <div className="w-full max-w-xl bg-white rounded-xl p-6 shadow-lg">
-                {/* 以下にコードを追記 */}
-                {/* ... */}
-                <div className="flex items-center">
-                    <img
-                        src={userIcon}
-                        alt="userIcon"
-                    />
-                    <p className="text-md md:text-2xl ml-2">hoge</p> 
+        <div className="my-4 flex flex-col items-center justify-center p-4 bg-gray-100">
+            <div className="w-full bg-white rounded-xl p-6 shadow-lg">
+                {/* ユーザー情報 */}
+                <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                        <img src={userIcon} alt="userIcon" />
+                        <p className="text-md md:text-2xl ml-2">hoge田hoge男</p> 
+                    </div>
+                    <p className="text-gray-500">3分前</p>
                 </div>
-                <div className="flex items-center">
+
+                {/* イベント詳細 */}
+                <div className="flex items-center justify-between mb-4">
                     <p>昼ご飯食べに行こー</p>
-                    <button className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
-                        <div className="flex items-center text-white">
-                            <img
-                            src={rocketIcon}
-                            alt="rocketIcon"
-                            />
-                            参加
+                    <button className="text-white ml-2 p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl">
+                        <div className="flex items-center">
+                            <img src={rocketIcon} alt="rocketIcon" />
+                            <span className="text-white ml-2">参加</span>
                         </div>
                     </button>
                 </div>
-                <div className="flex items-center">
-                    <img
-                    src={calenderIconActive}
-                    alt="calenderIconActive"
-                    />
-                    <p>2021/01/01 12:00</p>
-                    <img
-                    src={pinIconActive}
-                    alt="pinIconActive"/>
-                    <p>東京都</p>
-                </div>
 
+                {/* 日付と場所 */}
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                        <img src={calenderIconActive} alt="calenderIconActive" />
+                        <p className="ml-2">2021/01/01 12:00</p>
+                    </div>
+                    <div className="flex items-center">
+                        <img src={pinIconActive} alt="pinIconActive"/>
+                        <p className="ml-2">東京都</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
