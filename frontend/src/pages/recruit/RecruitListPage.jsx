@@ -3,6 +3,7 @@ import userIcon from "../../assets/images/icon_user_with_circle.svg";
 import rocketIcon from "../../assets/images/icon_rocket_white.svg";
 import calenderIconActive from "../../assets/images/matching_date.svg";
 import pinIconActive from "../../assets/images/matching_pin.svg";
+import bellIcon from "../../assets/images/icon_bell.svg";
 
 export const RecruitListPage = () => {
   return (
@@ -26,6 +27,13 @@ export const RecruitListPage = () => {
         className="fixed bottom-20 right-4 bg-gradient-to-r from-purple-600 to-blue-400 text-white ml-2 w-12 h-12 p-2 md:p-4 flex items-center justify-center rounded-full shadow-lg text-2xl"
       >
         ＋
+      </Link>
+      {/* お知らせボタン */}
+      <Link
+        to="/notifications"
+        className="fixed bottom-36 right-4 bg-white text-black ml-2 w-12 h-12 p-2 md:p-4 flex items-center justify-center rounded-full shadow-lg text-2xl"
+      >
+        <img src={bellIcon} alt="bellIcon" />
       </Link>
     </div>
   );

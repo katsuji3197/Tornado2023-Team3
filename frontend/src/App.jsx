@@ -26,6 +26,7 @@ import { MessagePage } from "./pages/messages/MessagePage";
 import { NotePage } from "./pages/matches/Aliennote";
 import { RecruitListPage } from "./pages/recruit/RecruitListPage";
 import { CreateRecruitPage } from "./pages/recruit/CreateRecruitPage";
+import { NotificationsPage } from "./pages/recruit/NotificationsPage.jsx";
 
 import { getCurrentUser } from "./api/auth";
 
@@ -246,6 +247,15 @@ export const App = () => {
             element={
               <PrivateRouteContent
                 component={CreateRecruitPage}
+                layout={DefaultLayout}
+              />
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <PrivateRouteContent
+                component={NotificationsPage}
                 layout={DefaultLayout}
               />
             }
