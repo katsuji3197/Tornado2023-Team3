@@ -1,5 +1,9 @@
 import client from "./client";
+import { getAuthHeaders } from "./auth";
 
-export const updateMatchedUser = (params) => {
-  return client.put("matched_users", params);
+export const getMatchedUsers = (params) => {
+  return client.get("matched_users", {
+    params: params,
+    headers: getAuthHeaders(),
+  });
 };

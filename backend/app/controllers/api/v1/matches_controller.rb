@@ -15,7 +15,7 @@ class Api::V1::MatchesController < ApplicationController
       match = current_user_match.match
     else
       match = find_or_create_match
-      MatchedUser.create(user: @current_user, match: match, status: 'pending')
+      MatchedUser.create(user_id: @current_user.id, match_id: match.id, status: 'pending')
     end
 
     render json: { status: 200, match: match }

@@ -1,20 +1,15 @@
 import client from "./client";
-import Cookies from "js-cookie";
-
-// 認証に関するヘッダーを取得
-const getAuthHeaders = () => {
-  const headers = {
-    "access-token": Cookies.get("_access_token"),
-    client: Cookies.get("_client"),
-    uid: Cookies.get("_uid"),
-  };
-
-  return headers;
-};
+import { getAuthHeaders } from "./auth";
 
 // マッチを作成または探すAPI
-export const findMatch = (params) => {
-  return client.post("matches/find_match", params, {
-    headers: getAuthHeaders(),
-  });
+export const findMatch = async (params) => {
+  try {
+    const response = await client.post("matches/find_match", params, {
+      headers: getAuthHeaders(),
+    });
+    return response;
+  } catch (error) {
+    console.error("findMatch API call failed:", error);
+    throw error; // エラーをthrowして、呼び出し元でcatchできるようにします。
+  }
 };
