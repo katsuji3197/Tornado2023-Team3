@@ -17,7 +17,7 @@ Rails.application.routes.draw do
           post :find_match
         end
       end
-      resources :matched_users, only: %i[create update]
+      resources :matched_users, only: %i[index create update]
     end
   end
 end

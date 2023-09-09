@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { findMatch } from "../../api/matches";
+import { useNavigate } from "react-router-dom";
 
 export const MatchInputPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
-  const [selectedDates, setSelectedDates] = useState([]);
-
   const [selectedPlace, setSelectedPlace] = useState("");
 
   const prefectures = [
@@ -57,23 +57,63 @@ export const MatchInputPage = () => {
     "沖縄県",
   ];
 
+  // 日時のフォーマット関数
+  const formatDate = (dateString) => {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+    return new Date(dateString).toLocaleDateString("ja-JP", options);
+  };
+
+  // 日時の変更時に発火する関数
   const handleDateChange = (e) => {
     setSelectedDate(e.target.value);
   };
 
-  const addDate = () => {
-    if (selectedDate && !selectedDates.includes(selectedDate)) {
-      setSelectedDates((prev) => [...prev, selectedDate]);
-      setSelectedDate("");
-    }
-  };
-
-  const removeDate = (dateToRemove) => {
-    setSelectedDates((prev) => prev.filter((date) => date !== dateToRemove));
-  };
-
+  // 場所の変更時に発火する関数
   const handlePlaceChange = (e) => {
     setSelectedPlace(e.target.value);
+  };
+
+  // 2. マッチを作成するための関数
+  const navigate = useNavigate();
+
+  const createMatch = async () => {
+    if (!selectedDate || !selectedPlace) {
+      alert("日時と場所を選択してください。");
+      return;
+    }
+
+    try {
+      const params = {
+        match_date: selectedDate,
+        meet_location: selectedPlace,
+      };
+
+      const response = await findMatch(params);
+      console.log(response);
+
+      if (response && response.status !== 200) {
+        console.log(response);
+        alert("マッチの作成に失敗しました。");
+        return;
+      }
+
+      // マッチ作成成功後の遷移
+      // history.push("/match", {
+      //   from: "/match-input",
+      //   createdMatch: response.data.match,
+      // });
+      navigate("/match", {
+        state: { from: "/match-input", createdMatch: response.data.match },
+      });
+    } catch (error) {
+      console.error("マッチの作成中にエラーが発生しました:", error);
+    }
   };
 
   return (
@@ -87,8 +127,8 @@ export const MatchInputPage = () => {
       {/* マッチング条件の入力フォーム */}
 
       {/* 日時選択 */}
-      <div className="">
-        <div className="text-lg md:text-2xl font-bold">日時の設定</div>
+      <div className="date-section mb-4 md:mb-8">
+        <h2 className="text-lg md:text-2xl font-bold">日時の設定</h2>
         <div className="text-black ml-2 w-full p-2 md:p-4 bg-white rounded-xl shadow-xl">
           <input
             type="datetime-local"
@@ -97,26 +137,9 @@ export const MatchInputPage = () => {
             className="bg-white w-full"
           />
         </div>
-        <div className="pt-6"></div>
-        <button
-          onClick={addDate}
-          className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-center shadow-xl"
-        >
-          日時を追加
-        </button>
-        <ul className="mt-2 md:mt-4">
-          {selectedDates.map((date, index) => (
-            <li key={index} className="flex items-center space-x-4 mt-2">
-              <span className="rounded-md bg-white p-2 shadow-xl">{date}</span>
-              <button
-                onClick={() => removeDate(date)}
-                className="p-1 md:p-2 text-red-600"
-              >
-                削除
-              </button>
-            </li>
-          ))}
-        </ul>
+        {selectedDate && (
+          <p className="mt-2">選択した日時: {formatDate(selectedDate)}</p>
+        )}
       </div>
 
       {/* 場所選択 */}
@@ -138,18 +161,26 @@ export const MatchInputPage = () => {
 
       {/* バックグランドの編集 */}
       <div>
-
-      <h2 className="text-lg md:text-2xl font-bold">最後に</h2>
+        <h2 className="text-lg md:text-2xl font-bold">最後に</h2>
         <Link to={"/edit-profile"} state={{ from: "/match-input" }}>
           <div className="background-section mb-4 md:mb-8">
-            <h2 className="text-black ml-2 w-full p-2 md:p-4 bg-white rounded-xl text-center shadow-xl">バックグランドの編集</h2>
+            <h2 className="text-black ml-2 w-full p-2 md:p-4 bg-white rounded-xl text-center shadow-xl">
+              バックグランドの編集
+            </h2>
           </div>
         </Link>
-        <Link to={"/match"} state={{ from: "/match-input" }}>
-          <div className="background-section mb-4 md:mb-8">
-            <h2 className="text-white ml-2 w-full p-2 md:p-4 bg-gradient-to-r from-purple-600 to-blue-400 rounded-xl text-center shadow-xl">更新を開始する👽</h2>
-          </div>
-        </Link>
+        <div
+          className={`background-section mb-4 md:mb-8 ${
+            selectedDate && selectedPlace
+              ? "bg-gradient-to-r from-purple-600 to-blue-400 cursor-pointer"
+              : "bg-gray-300"
+          }`}
+          onClick={createMatch}
+        >
+          <h2 className="text-white ml-2 w-full p-2 md:p-4 rounded-xl text-center shadow-xl">
+            交信を開始する👽
+          </h2>
+        </div>
       </div>
     </div>
   );
